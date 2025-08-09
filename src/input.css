@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Menu Styles */
+.h-top-menu-expanded {
+    @apply absolute top-10 z-50 w-full text-center bg-white;
+    animation: slideDown 0.3s ease-out forwards;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.h-top-menu-item {
+    @apply cursor-pointer py-1 hover:text-gray-800 relative inline-block mx-4;
+    @apply after:absolute after:bottom-0 after:left-0 after:bg-slate-900;
+    @apply after:h-0.5 after:w-0 hover:after:w-full;
+    @apply after:transition-all after:ease-in-out after:duration-300;
+}
+
+.h-top-menu-icon {
+    @apply flex items-center justify-center cursor-pointer;
+}
+
+.h-top-user-menu {
+    @apply w-5 h-5 inline-block;
+}
+
+/* Mobile Menu Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+#mobile-menu {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+#mobile-menu.hidden {
+    display: none;
+}
+
+/* Active Menu Item */
+.h-top-menu-item.active {
+    @apply text-gray-800;
+    @apply after:w-full;
+}
+
+/* Hover Effects */
+.h-top-menu-item:hover {
+    @apply text-gray-800;
+}
+
+/* Transition Classes */
+.menu-transition {
+    @apply transition-all duration-300 ease-in-out;
+}
+
+/* Mobile Menu Button Animation */
+@keyframes rotateMenu {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+.menu-button-active {
+    animation: rotateMenu 0.3s ease-out forwards;
+}
+.th-subheadline{
+    @apply flex justify-center items-center mb-24;
+}
+.th-subheadline-deco-line{
+    @apply w-8 h-px bg-gray-200;
+}
+.th-subheadline-label{
+    @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-[12px] text-center;
+}
+.h-button{
+    @apply absolute bg-white text-gray-900 w-11/12 bottom-4 left-1/2 -translate-x-1/2 hidden group-hover:block group-hover:animate-fadeIn text-center uppercase tracking-wider py-4 px-8 text-[13px] font-semibold cursor-pointer hover:bg-opacity-90 transition rounded z-20;
+}

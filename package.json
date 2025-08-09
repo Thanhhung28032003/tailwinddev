@@ -1,0 +1,21 @@
+{
+  "name": "tailwinddev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/output.css --watch",
+    "start": "npx live-server public --port=3000 --host=127.0.0.1 --no-browser"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0",
+    "yarn": "^1.22.22"
+  }
+}
+

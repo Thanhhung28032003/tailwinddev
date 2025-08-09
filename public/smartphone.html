@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartPhone</title>
+  <link href="output.css" rel="stylesheet" />
+  <script src="main.js" defer></script>
+</head>
+<body class="bg-slate-300">
+  <div class="content-wrapper font-Karla max-w-screen-2xl text-base mx-auto px-8">
+    <header class="p-6 mx-auto ">
+      <nav class="flex justify-center items-center relative">
+        <div class="absolute left-0 flex items-center">
+          <a href="index.html" class="flex items-center">
+            <img src="img/NEWS-TECH.png" alt="Logo" class="w-10 h-10 object-contain rounded">
+          </a>
+        </div>
+        <ul id="h-top-menu" class="hidden h-top-menu-expanded lg:flex lg:items-center lg:gap-8 uppercase text-sm text-gray-600 font-medium absolute lg:static top-full left-0 bg-white lg:bg-transparent w-full lg:w-auto transition-all duration-300 ease-in-out">
+          <li class="h-top-menu-item"><a href="index.html">Home</a></li>
+          <li class="h-top-menu-item"><a href="smartphone.html">SmartPhone</a></li>
+          <li class="h-top-menu-item"><a href="laptop.html">LapTop</a></li>
+          <li class="h-top-menu-item"><a href="tablet.html">Tablet</a></li>
+          <li class="h-top-menu-item"><a href="smarthome.html">SmartHome</a></li>
+          <li class="h-top-menu-item"><a href="xe.html">Xe</a></li>
+        </ul>
+
+        <ul class="absolute right-0 flex justify-end items-center cursor-pointer px-2 sm:px-4 uppercase text-sm text-gray-600 font-medium">
+          <li class="cursor-pointer py-1 hover:text-gray-800">
+            <a href="#" class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+              </svg>              
+              <span class="ml-2">Login</span>
+            </a>
+          </li>
+        </ul>
+        
+        <div class="absolute right-0 lg:hidden flex items-center justify-center cursor-pointer px-2 sm:px-8">
+          <svg id="h-toggle-top-menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-10">
+      <h1 class="text-3xl font-bold mb-6">SmartPhone</h1>
+      <p class="text-gray-600 mb-8">Tổng hợp tin tức, đánh giá và sản phẩm điện thoại.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-md shadow-sm overflow-hidden">
+          <img src="img/s24-ultra-den.jpg" alt="S24 Ultra" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h2 class="font-semibold mb-2">Samsung Galaxy S25 Ultra</h2>
+            <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Xem</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-md shadow-sm overflow-hidden">
+          <img src="img/iphone-16-pro-max-titan-den.jpg" alt="iPhone 16 Pro Max" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h2 class="font-semibold mb-2">iPhone 16 Pro Max</h2>
+            <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Xem</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-md shadow-sm overflow-hidden">
+          <img src="img/a55xanh.jpg" alt="Galaxy A55" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h2 class="font-semibold mb-2">Samsung Galaxy A55</h2>
+            <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Xem</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center py-6 mt-8 bg-gray-800 text-white">Footer</footer>
+  </div>
+</body>
+</html>
+
+
