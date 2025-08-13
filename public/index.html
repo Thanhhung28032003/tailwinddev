@@ -3,208 +3,433 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technology</title>
+  <title>TechNews - Tin Tức Công Nghệ</title>
   
   <!-- Favicon -->
-  <link rel="icon" href="img/NEWS-TECH.png" sizes="16x16">
+  <link rel="icon" href="img/NEWS TECH.png" sizes="16x16">
 
   <!-- Custom CSS -->
   <link href="output.css" rel="stylesheet">
-
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- JavaScript -->
   <script src="main.js" defer></script>
 </head>
-<body class="bg-slate-300">
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 font-['Inter']">
 
   <!-- Wrapper -->
-  <div class="content-wrapper font-Karla max-w-screen-2xl text-base mx-auto px-8">
+  <div class="content-wrapper max-w-screen-2xl text-base mx-auto">
 
     <!-- Header -->
-    <header class="p-6 mx-auto ">
-      <nav class="flex justify-center items-center relative">
-        
-        <!-- Logo -->
-        <div class="absolute left-0 flex items-center">
-          <a href="/" class="flex items-center">
-            <img src="img/NEWS-TECH.png" alt="Logo" class="w-10 h-10 object-contain rounded">
-          </a>
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="/" class="flex items-center space-x-3 group">
+              <img src="img/NEWS TECH.png" alt="TechNews Logo" class="w-12 h-12 object-contain rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300">
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden lg:flex items-center space-x-8">
+            <a href="index.html" class="nav-link group">
+              <i class="fas fa-home mr-2"></i>
+              <span>Trang Chủ</span>
+              <div class="nav-underline"></div>
+            </a>
+            <a href="smartphone.html" class="nav-link group">
+              <i class="fas fa-mobile-alt mr-2"></i>
+              <span>Điện Thoại</span>
+              <div class="nav-underline"></div>
+            </a>
+            <a href="laptop.html" class="nav-link group">
+              <i class="fas fa-laptop mr-2"></i>
+              <span>Laptop</span>
+              <div class="nav-underline"></div>
+            </a>
+            <a href="tablet.html" class="nav-link group">
+              <i class="fas fa-tablet-alt mr-2"></i>
+              <span>Máy Tính Bảng</span>
+              <div class="nav-underline"></div>
+            </a>
+            <a href="smarthome.html" class="nav-link group">
+              <i class="fas fa-home mr-2"></i>
+              <span>Nhà Thông Minh</span>
+              <div class="nav-underline"></div>
+            </a>
+            <a href="xe.html" class="nav-link group">
+              <i class="fas fa-car mr-2"></i>
+              <span>Xe Điện</span>
+              <div class="nav-underline"></div>
+            </a>
+          </div>
+
+          <!-- User Menu & Search -->
+          <div class="flex items-center space-x-4">
+            <!-- Search Bar -->
+            <div class="hidden md:flex items-center relative">
+              <input type="text" placeholder="Tìm kiếm sản phẩm..." 
+                     class="w-64 px-4 py-2 pl-10 pr-4 text-sm bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+              <i class="fas fa-search absolute left-3 text-gray-400"></i>
+            </div>
+            
+            <!-- User Actions -->
+            <div class="flex items-center space-x-3">
+              <button class="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300">
+                <i class="fas fa-heart text-lg"></i>
+              </button>
+              <button class="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300">
+                <i class="fas fa-shopping-cart text-lg"></i>
+              </button>
+              <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                <i class="fas fa-user text-sm"></i>
+                <span class="text-sm font-medium">Đăng Nhập</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="lg:hidden">
+            <button id="mobile-menu-btn" class="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
 
-        <!-- Menu -->
-        <ul id="h-top-menu" class="hidden h-top-menu-expanded lg:flex lg:items-center lg:gap-8 uppercase text-sm text-gray-600 font-medium 
-        absolute lg:static top-full left-0 bg-white lg:bg-transparent w-full lg:w-auto transition-all duration-300 ease-in-out">
-          <li class="h-top-menu-item"><a href="index.html">Home</a></li>
-          <li class="h-top-menu-item"><a href="smartphone.html">SmartPhone</a></li>
-          <li class="h-top-menu-item"><a href="laptop.html">LapTop</a></li>
-          <li class="h-top-menu-item"><a href="tablet.html">Tablet</a></li>
-          <li class="h-top-menu-item"><a href="smarthome.html">SmartHome</a></li>
-          <li class="h-top-menu-item"><a href="xe.html">Xe</a></li>
-        </ul>
-
-        <!-- User Menu -->
-        <ul class="absolute right-0 flex justify-end items-center cursor-pointer px-2 sm:px-4 uppercase text-sm text-gray-600 font-medium">
-          <li class="cursor-pointer py-1 hover:text-gray-800">
-            <a href="#" class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-              </svg>              
-              <span class="ml-2">Login</span>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 py-4">
+          <div class="flex flex-col space-y-3">
+            <a href="index.html" class="mobile-nav-link">
+              <i class="fas fa-home mr-3"></i>
+              <span>Trang Chủ</span>
             </a>
-          </li>
-        </ul>
-
-        <!-- Mobile Menu Button -->
-        <div class="absolute right-0 lg:hidden flex items-center justify-center cursor-pointer px-2 sm:px-8">
-          <svg id="h-toggle-top-menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>          
+            <a href="smartphone.html" class="mobile-nav-link">
+              <i class="fas fa-mobile-alt mr-3"></i>
+              <span>Điện Thoại</span>
+            </a>
+            <a href="laptop.html" class="mobile-nav-link">
+              <i class="fas fa-laptop mr-3"></i>
+              <span>Laptop</span>
+            </a>
+            <a href="tablet.html" class="mobile-nav-link">
+              <i class="fas fa-tablet-alt mr-3"></i>
+              <span>Máy Tính Bảng</span>
+            </a>
+            <a href="smarthome.html" class="mobile-nav-link">
+              <i class="fas fa-home mr-3"></i>
+              <span>Nhà Thông Minh</span>
+            </a>
+            <a href="xe.html" class="mobile-nav-link">
+              <i class="fas fa-car mr-3"></i>
+              <span>Xe Điện</span>
+            </a>
+          </div>
         </div>
       </nav>
     </header>
 
     <!-- Main Content -->
-    <main>
-      <!-- Slider -->
-      <div class="relative h-[600px] bg-cover bg-center flex items-center justify-center text-white mt-16" style="background-image: url('./img/s24-ultra-den.jpg');">
-        <!-- Lớp phủ tối -->
-        <div class="absolute inset-0 bg-black/70 z-0"></div>
+    <main class="px-4 sm:px-6 lg:px-8">
+      <!-- Hero Section -->
+      <section class="relative h-[80vh] min-h-[600px] bg-cover bg-center flex items-center justify-center text-white mt-8 rounded-3xl overflow-hidden shadow-2xl" style="background-image: url('./img/s24-ultra-den.jpg');">
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 z-0"></div>
       
-        <!-- Nội dung -->
-        <div class="relative z-10 text-center px-4 max-w-2xl">
-          <p class="uppercase tracking-widest text-sm mb-4 text-yellow-200 font-bold drop-shadow-lg">Best Place To Buy Coffee</p>
-          <h1 class="text-5xl font-bold mb-4 text-white drop-shadow-2xl">Coffee Mugs</h1>
-          <p class="text-lg mb-6 text-white drop-shadow-lg font-medium">The most versatile furniture system ever created. Designed to fit your life, made to move and grow.</p>
-          
-          <!-- Nút CTA -->
-          <a href="#products" class="inline-block px-6 py-3 bg-yellow-400 text-black font-bold rounded shadow-lg hover:bg-yellow-300 transition">
-            Explore Our Products
-          </a>
-        </div>
-      </div>
-      
-      <div class="story flex justify-center items-center">
-          <div class="px-4 sm:px-16 md:px-32 lg:px-64 xl:px-96 px-32 text-center">
-            <div class="text-3xl leading-10 mb-6 font-bold">
-              Even the all-powerful Pointing has no control about the blind texts.
-            </div>
-            <div class="text-gray-500 leading-7 mb-7">
-              It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-            </div>
-            <div class="mt-6">
-              <a href="https://dev-technology-store-news.pantheonsite.io/" class="text-green-500 hover:text-green-400 transition font-semibold underline cursor-pointer py-1
-               hover:text-gray-800 relative inline-block mx-4 
-               after:absolute after:bottom-2 after:left-0 after:bg-slate-900 
-               after:h-0.5 after:w-full after:transition-all after:ease-in-out after:duration-400">
-                Read the full Story
-              </a>
-            </div>
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl">
+          <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-semibold rounded-full mb-6 shadow-lg">
+            <i class="fas fa-star mr-2 text-yellow-300"></i>
+            <span>Tin Tức Công Nghệ Mới Nhất</span>
           </div>
-      </div>
-      <!--End story-->      
-      <div class="th-subheadline">
-        <div class="th-subheadline-deco-line "></div>
-        <div class="th-subheadline-label ">Featured Mugs</div>
-        <div class="th-subheadline-deco-line "></div>
-      </div>
-        <div class="featured-mugs w-[95%] lg:w-[65%] mx-auto mb-24">
-              <div class="grid grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-4">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl leading-tight">
+            Khám Phá Thế Giới
+            <span class="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Công Nghệ</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-gray-200 drop-shadow-lg font-medium leading-relaxed max-w-3xl mx-auto">
+            Cập nhật những xu hướng công nghệ mới nhất, đánh giá sản phẩm chất lượng và tin tức nóng hổi từ thế giới công nghệ
+          </p>
           
-          <!-- Sản phẩm 1 -->
-          <div class="relative border-2 border-gray-200 h-[400px] flex flex-col items-center justify-between bg-[#eac1b3] p-4 rounded-lg shadow-md overflow-hidden group">
-            <!-- Badge On Sale -->
-            <div class="absolute top-4 right-4 bg-blue-500 border border-[#a97c50] text-[#a97c50] px-4 py-1 text-sm font-semibold rounded shadow">On Sale.</div>
-            <!-- Ảnh sản phẩm -->
-            <img src="img/s24ultra.png" alt="Samsung Galaxy S25 Ultra" class="object-contain w-40 h-40 mt-8" />
-            <!-- Nút Explore Mug -->
-            <div class="text-center mt-8">
-              <a href="#" alt="h-product-name">
-                <div class="text-xl mb-2 hover:text-green-400">SamSung Galaxy S25 Ultra</div>
-              </a>
-              <div class="h-price flex justify-center items-center gap-2 mb-2">
-                <span class="text-red-600 font-bold">30.890.000 VND</span>
-                <span class="text-lg ml-2 line-through text-gray-400">33.000.000 VND</span>
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#products" class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-full shadow-2xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-3xl">
+              <i class="fas fa-rocket mr-3 group-hover:animate-bounce"></i>
+              <span>Khám Phá Ngay</span>
+            </a>
+            <a href="#news" class="group inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
+              <i class="fas fa-newspaper mr-3"></i>
+              <span>Tin Tức Mới</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="absolute top-10 left-10 hidden lg:block">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+            <i class="fas fa-mobile-alt text-2xl text-white"></i>
+          </div>
+        </div>
+        <div class="absolute bottom-20 right-10 hidden lg:block">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+            <i class="fas fa-laptop text-2xl text-white"></i>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Story Section -->
+      <section class="py-20">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+              Về Chúng Tôi
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="text-xl md:text-2xl leading-relaxed mb-8 font-medium text-gray-700">
+            Chúng tôi là đội ngũ chuyên gia công nghệ với hơn 10 năm kinh nghiệm trong việc đánh giá và phân tích các sản phẩm công nghệ mới nhất
+          </div>
+          
+          <div class="text-lg leading-relaxed mb-10 text-gray-600 max-w-3xl mx-auto">
+            Với sứ mệnh mang đến cho độc giả những thông tin chính xác, khách quan và cập nhật nhất về thế giới công nghệ. Chúng tôi cam kết cung cấp những đánh giá chi tiết, so sánh khách quan và tin tức nóng hổi từ các hãng công nghệ hàng đầu thế giới.
+          </div>
+          
+          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a href="https://dev-technology-store-news.pantheonsite.io/" class="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-full hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <i class="fas fa-external-link-alt mr-2 group-hover:animate-pulse"></i>
+              <span>Đọc Thêm</span>
+            </a>
+            <a href="#contact" class="group inline-flex items-center px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
+              <i class="fas fa-envelope mr-2"></i>
+              <span>Liên Hệ</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Products Section -->
+      <section class="py-20">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+            Sản Phẩm Nổi Bật
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-8"></div>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Những sản phẩm công nghệ mới nhất và được đánh giá cao nhất từ các hãng uy tín
+          </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Product 1 -->
+            <div class="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+              <div class="relative">
+                <img src="img/s24ultra.png" alt="Samsung Galaxy S25 Ultra" class="w-full h-64 object-contain bg-gradient-to-br from-blue-50 to-indigo-100 p-8 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute top-4 right-4">
+                  <span class="inline-flex items-center px-3 py-1 bg-gradient-to-r from-red-500 to-pink-600 text-white text-xs font-bold rounded-full shadow-lg">
+                    <i class="fas fa-fire mr-1"></i>
+                    HOT SALE
+                  </span>
+                </div>
+              </div>
+              
+              <div class="p-6 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                  Samsung Galaxy S25 Ultra
+                </h3>
+                <div class="flex justify-center items-center gap-3 mb-6">
+                  <span class="text-2xl font-bold text-red-600">30.890.000₫</span>
+                  <span class="text-lg line-through text-gray-400">33.000.000₫</span>
+                </div>
+                <div class="flex justify-center items-center gap-2 mb-6">
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-sm text-gray-500">(128 đánh giá)</span>
+                </div>
+                <a href="#" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <i class="fas fa-info-circle mr-2"></i>
+                  <span>Xem Chi Tiết</span>
+                </a>
               </div>
             </div>
             
-            <a href="#" class="h-button">Thông tin</a>
-          </div>
-      
-          <!-- Sản phẩm 2 -->
-          <div class="relative border-2 border-gray-200 h-[400px] flex flex-col items-center justify-between bg-[#eac1b3] p-4 rounded-lg shadow-md overflow-hidden group">
-            <!-- Badge On Sale -->
-            <div class="absolute top-4 right-4 bg-blue-500 border border-[#a97c50] text-[#a97c50] px-4 py-1 text-sm font-semibold rounded shadow">On Sale.</div>
-            <!-- Ảnh sản phẩm -->
-            <img src="img/iphone-16-pro-max-titan-den.jpg" alt="Apple iPhone 16 Pro Max" class="object-contain w-40 h-40 mt-8" />
-            <!-- Thông tin sản phẩm -->
-            <div class="text-center mt-8">
-              <a href="#" alt="h-product-name">
-                <div class="text-xl mb-2 hover:text-green-400">Apple iPhone 16 Pro Max</div>
-              </a>
-              <div class="h-price flex justify-center items-center gap-2 mb-2">
-                <span class="text-red-600 font-bold">31.890.000 VND</span>
-                <span class="text-xl ml-2 line-through text-gray-400">34.990.000 VND</span>
+            <!-- Product 2 -->
+            <div class="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+              <div class="relative">
+                <img src="img/iphone-16-pro-max-titan-den.jpg" alt="Apple iPhone 16 Pro Max" class="w-full h-64 object-contain bg-gradient-to-br from-gray-50 to-slate-100 p-8 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute top-4 right-4">
+                  <span class="inline-flex items-center px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs font-bold rounded-full shadow-lg">
+                    <i class="fas fa-leaf mr-1"></i>
+                    NEW
+                  </span>
+                </div>
               </div>
-              <div class="h-button">
-                Thông tin
+              
+              <div class="p-6 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 group-hover:text-green-600 transition-colors duration-300">
+                  Apple iPhone 16 Pro Max
+                </h3>
+                <div class="flex justify-center items-center gap-3 mb-6">
+                  <span class="text-2xl font-bold text-red-600">31.890.000₫</span>
+                  <span class="text-lg line-through text-gray-400">34.990.000₫</span>
+                </div>
+                <div class="flex justify-center items-center gap-2 mb-6">
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-sm text-gray-500">(95 đánh giá)</span>
+                </div>
+                <a href="#" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-full hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <i class="fas fa-info-circle mr-2"></i>
+                  <span>Xem Chi Tiết</span>
+                </a>
               </div>
-        </div>
-      </div>
-      
-        <div class="th-subheadline md:col-span-2">
-          <div class="th-subheadline-deco-line"></div>
-          <div class="th-subheadline-label ">Sản Phẩm Mới</div>
-        <div class="th-subheadline-deco-line "></div>
-      </div>
-        <!-- Grid sản phẩm -->
-        <div class="w-full max-w-6xl mx-auto px-4 mb-20">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
-            <!-- Card 1 -->
-            <div class="bg-white h-[400px] flex flex-col items-center justify-center relative overflow-hidden rounded-md shadow-sm w-full">
-              <a href="https://example.com/iphone-16-pro-max-256gb" class="block h-full w-full flex flex-col items-center justify-center">
-                <span class="absolute top-4 right-4 bg-white text-gray-700 border border-gray-300 px-3 py-1 text-xs font-semibold rounded shadow-sm">On Sale.</span>
-                <img src="img/iphone-16-pro-max-titan-den.jpg" alt="Product 1" class="object-contain h-32 mb-6" />
-                <div class="text-center">
-                  <div class="text-lg font-semibold mb-1">Iphone 16 Pro Max 256GB</div>
-                  <div>
-                    <span class="text-[#b97c50] font-bold">29.990.000D</span>
-                    <span class="text-gray-400 line-through ml-2">34.990.000D</span>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Mua</a>
-            </div>
-            <!-- Card 2 -->
-            <div class="bg-white h-[400px] flex flex-col items-center justify-center relative overflow-hidden rounded-md shadow-sm w-full">
-              <a href="https://example.com/iphone-16-pro-128gb" class="block h-full w-full flex flex-col items-center justify-center">
-                <span class="absolute top-4 right-4 bg-white text-gray-700 border border-gray-300 px-3 py-1 text-xs font-semibold rounded shadow-sm">On Sale.</span>
-                <img src="img/iphone-16-pro-max-titan-den.jpg" alt="Product 2" class="object-contain h-32 mb-6" />
-                <div class="text-center">
-                  <div class="text-lg font-semibold mb-1">Iphone 16 Pro 128GB</div>
-                  <div>
-                    <span class="text-[#b97c50] font-bold">$50.00</span>
-                    <span class="text-gray-400 line-through ml-2">$69.00 USD</span>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Mua</a>
-            </div>
-            <!-- Card 3 -->
-            <div class="bg-white h-[400px] flex flex-col items-center justify-center relative overflow-hidden rounded-md shadow-sm w-full">
-              <a href="https://example.com/iphone-16-plus-128gb" class="block h-full w-full flex flex-col items-center justify-center">
-                <span class="absolute top-4 right-4 bg-white text-gray-700 border border-gray-300 px-3 py-1 text-xs font-semibold rounded shadow-sm">On Sale.</span>
-                <img src="img/iphone-16-pro-max-titan-den.jpg" alt="Product 3" class="object-contain h-32 mb-6" />
-                <div class="text-center">
-                  <div class="text-lg font-semibold mb-1">Iphone 16 plus 128GB</div>
-                  <div>
-                    <span class="text-[#b97c50] font-bold">$50.00</span>
-                    <span class="text-gray-400 line-through ml-2">$69.00 USD</span>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Mua</a>
             </div>
           </div>
         </div>
+      </section>
+      
+      <!-- New Products Section -->
+      <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl mx-4 sm:mx-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+            Sản Phẩm Mới Nhất
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-8"></div>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Khám phá những sản phẩm công nghệ mới nhất vừa được ra mắt
+          </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Product Card 1 -->
+            <div class="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
+              <div class="relative">
+                <img src="img/iphone-16-pro-max-titan-den.jpg" alt="iPhone 16 Pro Max 256GB" class="w-full h-48 object-contain bg-gradient-to-br from-gray-50 to-slate-100 p-6 group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute top-4 right-4">
+                  <span class="inline-flex items-center px-3 py-1 bg-gradient-to-r from-red-500 to-pink-600 text-white text-xs font-bold rounded-full shadow-lg">
+                    <i class="fas fa-fire mr-1"></i>
+                    HOT
+                  </span>
+                </div>
+              </div>
+              
+              <div class="p-6 text-center">
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  iPhone 16 Pro Max 256GB
+                </h3>
+                <div class="flex justify-center items-center gap-3 mb-4">
+                  <span class="text-xl font-bold text-red-600">29.990.000₫</span>
+                  <span class="text-lg line-through text-gray-400">34.990.000₫</span>
+                </div>
+                <div class="flex justify-center items-center gap-2 mb-4">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-xs text-gray-500">(89 đánh giá)</span>
+                </div>
+                <a href="#" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-full hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <i class="fas fa-shopping-cart mr-2"></i>
+                  <span>Mua Ngay</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
+              <div class="relative">
+                <img src="img/iphone-16-pro-max-titan-den.jpg" alt="iPhone 16 Pro 128GB" class="w-full h-48 object-contain bg-gradient-to-br from-gray-50 to-slate-100 p-6 group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute top-4 right-4">
+                  <span class="inline-flex items-center px-3 py-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs font-bold rounded-full shadow-lg">
+                    <i class="fas fa-tag mr-1"></i>
+                    SALE
+                  </span>
+                </div>
+              </div>
+              
+              <div class="p-6 text-center">
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  iPhone 16 Pro 128GB
+                </h3>
+                <div class="flex justify-center items-center gap-3 mb-4">
+                  <span class="text-xl font-bold text-red-600">24.990.000₫</span>
+                  <span class="text-lg line-through text-gray-400">29.990.000₫</span>
+                </div>
+                <div class="flex justify-center items-center gap-2 mb-4">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-xs text-gray-500">(67 đánh giá)</span>
+                </div>
+                <a href="#" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-full hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <i class="fas fa-shopping-cart mr-2"></i>
+                  <span>Mua Ngay</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
+              <div class="relative">
+                <img src="img/iphone-16-pro-max-titan-den.jpg" alt="iPhone 16 Plus 128GB" class="w-full h-48 object-contain bg-gradient-to-br from-gray-50 to-slate-100 p-6 group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute top-4 right-4">
+                  <span class="inline-flex items-center px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs font-bold rounded-full shadow-lg">
+                    <i class="fas fa-leaf mr-1"></i>
+                    NEW
+                  </span>
+                </div>
+              </div>
+              
+              <div class="p-6 text-center">
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  iPhone 16 Plus 128GB
+                </h3>
+                <div class="flex justify-center items-center gap-3 mb-4">
+                  <span class="text-xl font-bold text-red-600">22.990.000₫</span>
+                  <span class="text-lg line-through text-gray-400">26.990.000₫</span>
+                </div>
+                <div class="flex justify-center items-center gap-2 mb-4">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-xs text-gray-500">(45 đánh giá)</span>
+                </div>
+                <a href="#" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-full hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <i class="fas fa-shopping-cart mr-2"></i>
+                  <span>Mua Ngay</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
         <div class="w-full max-w-6xl mx-auto px-4 mb-20">
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
             <!-- Card 1 -->
@@ -358,23 +583,27 @@
           <div class="th-subheadline-label ">Đánh Giá</div>
         <div class="th-subheadline-deco-line "></div>
       </div>
-        <div class="more-products w-full max-w-4xl mx-auto mb-24 px-4">
+      <div class="more-products w-full max-w-4xl mx-auto mb-12 px-4">
+  
           <!-- Sản phẩm 1 -->
-          <div class="bg-white rounded-md shadow-sm overflow-hidden flex flex-col md:flex-row mb-8">
-            <img src="img/iphone-16-pro-max-titan-den.jpg" alt="Iphone 16 Pro Max" class="object-cover md:w-1/3 w-full h-56 md:h-auto" />
+        <div class="more-product-card flex flex-col md:flex-row bg-white rounded-lg shadow mb-6 overflow-hidden">
+          <img src="img/iphone-16-pro-max-titan-den.jpg" alt="Iphone 16 Pro Max" 
+               class="object-cover md:w-1/3 w-full h-56 md:h-auto" />
             <div class="p-6 flex flex-col justify-center md:w-2/3 w-full">
-              <h2 class="text-xl font-bold mb-2">Đánh Giá Iphone 16 Pro Max</h2>
+            <h2 class="text-xl font-bold mb-2">Đánh Giá Iphone 16 Pro Max</h2>
               <p class="text-gray-600 mb-4">Sản phẩm mới nhất, thiết kế sang trọng, hiệu năng mạnh mẽ, camera đỉnh cao.</p>
               <div>
-                <a href="" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Xem</a>
-              </div>
+              <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Xem</a>
             </div>
           </div>
+        </div>
+      
           <!-- Sản phẩm 2 -->
-          <div class="bg-white rounded-md shadow-sm overflow-hidden flex flex-col md:flex-row mb-8">
-            <img src="img/z fold 7 xanh.png" alt="SamSung Galaxy Z Fold 7" class="object-cover md:w-1/3 w-full h-56 md:h-auto" />
+        <div class="more-product-card flex flex-col md:flex-row bg-white rounded-lg shadow mb-6 overflow-hidden">
+          <img src="img/z fold 7 xanh.png" alt="SamSung Galaxy Z Fold 7" 
+               class="object-cover md:w-1/3 w-full h-56 md:h-auto" />
             <div class="p-6 flex flex-col justify-center md:w-2/3 w-full">
-              <h2 class="text-xl font-bold mb-2">Đánh Giá SamSung Galaxy Z Fold 7</h2>
+            <h2 class="text-xl font-bold mb-2">Đánh Giá SamSung Galaxy Z Fold 7</h2>
               <div class="mb-2">
                 <span class="text-[#b97c50] font-bold text-lg">45.990.000D</span>
                 <span class="text-gray-400 line-through ml-2">49.990.000D</span>
@@ -385,11 +614,13 @@
               </div>
             </div>
           </div>
+      
           <!-- Sản phẩm 3 -->
-          <div class="bg-white rounded-md shadow-sm overflow-hidden flex flex-col md:flex-row mb-8">
-            <img src="img/s24-ultra-den.jpg" alt="SamSung Galaxy S25 Ultra" class="object-cover md:w-1/3 w-full h-56 md:h-auto" />
+        <div class="more-product-card flex flex-col md:flex-row bg-white rounded-lg shadow mb-6 overflow-hidden">
+          <img src="img/s24-ultra-den.jpg" alt="SamSung Galaxy S25 Ultra" 
+               class="object-cover md:w-1/3 w-full h-56 md:h-auto" />
             <div class="p-6 flex flex-col justify-center md:w-2/3 w-full">
-              <h2 class="text-xl font-bold mb-2">Đánh Giá SamSung Galaxy S25 Ultra</h2>
+            <h2 class="text-xl font-bold mb-2">Đánh Giá SamSung Galaxy S25 Ultra</h2>
               <div class="mb-2">
                 <span class="text-[#b97c50] font-bold text-lg">39.990.000D</span>
                 <span class="text-gray-400 line-through ml-2">44.990.000D</span>
@@ -397,45 +628,244 @@
               <p class="text-gray-600 mb-4">Camera 200MP, pin trâu, màn hình siêu nét, flagship Android mạnh nhất.</p>
               <div>
                 <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Mua</a>
+              </div>
+          </div>
+        </div>
+      
+        <!-- Sản phẩm 4 -->
+        <div class="more-product-card flex flex-col md:flex-row bg-white rounded-lg shadow mb-6 overflow-hidden">
+          <img src="img/s24-ultra-den.jpg" alt="SamSung Galaxy S25 Ultra" 
+               class="object-cover md:w-1/3 w-full h-56 md:h-auto" />
+          <div class="p-6 flex flex-col justify-center md:w-2/3 w-full">
+            <h2 class="text-xl font-bold mb-2">Đánh Giá SamSung Galaxy S25 Ultra</h2>
+            <div class="mb-2">
+              <span class="text-[#b97c50] font-bold text-lg">39.990.000D</span>
+              <span class="text-gray-400 line-through ml-2">44.990.000D</span>
+            </div>
+            <p class="text-gray-600 mb-4">Camera 200MP, pin trâu, màn hình siêu nét, flagship Android mạnh nhất.</p>
+            <div>
+              <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Mua</a>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      
+        
+        <div class="th-subheadline md:col-span-2 mb-16">
+          <div class="th-subheadline-deco-line"></div>
+          <div class="th-subheadline-label text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-lg">Xu Hướng</div>
+          <div class="th-subheadline-deco-line"></div>
+        </div>
+        
+        <div class="w-full max-w-7xl mx-auto px-6 mb-20">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+            <!-- Card 1 -->
+            <div class="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100 h-auto min-h-[600px]">
+              <div class="p-6">
+                <div class="relative mb-6">
+                  <img src="img/a55xanh.jpg" alt="SamSung Galaxy A55" class="w-full h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" />
+                  <div class="absolute top-3 right-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                    HOT
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">Đánh Giá SamSung Galaxy A55</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed mb-6">Sản phẩm mới nhất, thiết kế sang trọng, hiệu năng mạnh mẽ, camera đỉnh cao.</p>
+                  <a href="" class="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100 h-auto min-h-[600px]">
+              <div class="p-6">
+                <div class="relative mb-6">
+                  <img src="img/a55xanh.jpg" alt="SamSung Galaxy A55" class="w-full h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" />
+                  <div class="absolute top-3 right-3 bg-gradient-to-r from-red-500 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                    NEW
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-red-600 transition-colors duration-300">Đánh Giá SamSung Galaxy A55</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed mb-6">Sản phẩm mới nhất, thiết kế sang trọng, hiệu năng mạnh mẽ, camera đỉnh cao.</p>
+                  <a href="" class="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100 h-auto min-h-[600px]">
+              <div class="p-6">
+                <div class="relative mb-6">
+                  <img src="img/a55xanh.jpg" alt="SamSung Galaxy A55" class="w-full h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" />
+                  <div class="absolute top-3 right-3 bg-gradient-to-r from-yellow-500 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                    SALE
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors duration-300">Đánh Giá SamSung Galaxy A55</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed mb-6">Sản phẩm mới nhất, thiết kế sang trọng, hiệu năng mạnh mẽ, camera đỉnh cao.</p>
+                  <a href="" class="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100 h-auto min-h-[600px]">
+              <div class="p-6">
+                <div class="relative mb-6">
+                  <img src="img/a55xanh.jpg" alt="SamSung Galaxy A55" class="w-full h-72 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" />
+                  <div class="absolute top-3 right-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                    TOP
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors duration-300">Đánh Giá SamSung Galaxy A55</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed mb-6">Sản phẩm mới nhất, thiết kế sang trọng, hiệu năng mạnh mẽ, camera đỉnh cao.</p>
+                  <a href="" class="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    Xem Chi Tiết
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="bg-white rounded-md shadow-sm overflow-hidden flex flex-col md:flex-row mb-8">
-            <img src="img/s24-ultra-den.jpg" alt="SamSung Galaxy S25 Ultra" class="object-cover md:w-1/3 w-full h-56 md:h-auto" />
-            <div class="p-6 flex flex-col justify-center md:w-2/3 w-full">
-              <h2 class="text-xl font-bold mb-2">Đánh Giá SamSung Galaxy S25 Ultra</h2>
-              <div class="mb-2">
-                <span class="text-[#b97c50] font-bold text-lg">39.990.000D</span>
-                <span class="text-gray-400 line-through ml-2">44.990.000D</span>
+      </div>
+        <div class="th-subheadline md:col-span-2">
+          <div class="th-subheadline-deco-line"></div>
+          <div class="th-subheadline-label">Tin Tức</div>
+          <div class="th-subheadline-deco-line"></div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Company Info -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <img src="img/NEWS TECH.png" alt="TechNews Logo" class="w-10 h-10 object-contain rounded-lg">
+              <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">TechNews</span>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Nguồn tin tức công nghệ đáng tin cậy nhất Việt Nam. Cập nhật những xu hướng mới nhất và đánh giá sản phẩm khách quan.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-red-400 transition-colors duration-300">
+                <i class="fab fa-youtube text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-pink-400 transition-colors duration-300">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-white">Liên Kết Nhanh</h3>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Trang Chủ</a></li>
+              <li><a href="smartphone.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Điện Thoại</a></li>
+              <li><a href="laptop.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Laptop</a></li>
+              <li><a href="tablet.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Máy Tính Bảng</a></li>
+              <li><a href="smarthome.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Nhà Thông Minh</a></li>
+            </ul>
+          </div>
+
+          <!-- Categories -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-white">Danh Mục</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Tin Tức Công Nghệ</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Đánh Giá Sản Phẩm</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">So Sánh Giá</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Hướng Dẫn Sử Dụng</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Thủ Thuật</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-white">Liên Hệ</h3>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-map-marker-alt text-blue-400"></i>
+                <span class="text-gray-300 text-sm">Hà Nội, Việt Nam</span>
               </div>
-              <p class="text-gray-600 mb-4">Camera 200MP, pin trâu, màn hình siêu nét, flagship Android mạnh nhất.</p>
-              <div>
-                <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded transition">Mua</a>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-phone text-blue-400"></i>
+                <span class="text-gray-300 text-sm">+84 123 456 789</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-envelope text-blue-400"></i>
+                <span class="text-gray-300 text-sm">info@technews.vn</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="th-subheadline md:col-span-2">
-        <div class="th-subheadline-deco-line "></div>
-          <div class="th-subheadline-label ">Xu Hướng</div>
-        <div class="th-subheadline-deco-line "></div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-700 mt-12 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm">
+              © 2024 TechNews. Tất cả quyền được bảo lưu.
+            </p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+              <a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-300">Chính Sách Bảo Mật</a>
+              <a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-300">Điều Khoản Sử Dụng</a>
+              <a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-300">Sitemap</a>
+            </div>
+          </div>
+        </div>
       </div>
-        <div class="th-subheadline md:col-span-2">
-        <div class="th-subheadline-deco-line "></div>
-          <div class="th-subheadline-label ">Thủ Thuật</div>
-        <div class="th-subheadline-deco-line "></div>
-      </div>
-        <div class="th-subheadline md:col-span-2">
-        <div class="th-subheadline-deco-line "></div>
-          <div class="th-subheadline-label ">Tin Tức</div>
-        <div class="th-subheadline-deco-line "></div>
-      </div>
-    </main>
-    <!-- Footer -->
-    <footer class="text-center py-6 mt-8 bg-gray-800 text-white">
-      Footer
     </footer>
-  </div> 
+  </div>
+
+  <!-- Custom CSS for Navigation -->
+  <style>
+    .nav-link {
+      @apply relative px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-lg hover:bg-blue-50;
+    }
+    
+    .nav-underline {
+      @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:w-full;
+    }
+    
+    .mobile-nav-link {
+      @apply flex items-center px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300 font-medium;
+    }
+    
+    .shadow-3xl {
+      box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>

@@ -3,50 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SmartPhone</title>
+  <title>TechNews - SmartPhone</title>
+  <!-- Styles -->
   <link href="output.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Scripts -->
   <script src="main.js" defer></script>
 </head>
-<body class="bg-slate-300">
-  <div class="content-wrapper font-Karla max-w-screen-2xl text-base mx-auto px-8">
-    <header class="p-6 mx-auto ">
-      <nav class="flex justify-center items-center relative">
-        <div class="absolute left-0 flex items-center">
-          <a href="index.html" class="flex items-center">
-            <img src="img/NEWS-TECH.png" alt="Logo" class="w-10 h-10 object-contain rounded">
-          </a>
-        </div>
-        <ul id="h-top-menu" class="hidden h-top-menu-expanded lg:flex lg:items-center lg:gap-8 uppercase text-sm text-gray-600 font-medium absolute lg:static top-full left-0 bg-white lg:bg-transparent w-full lg:w-auto transition-all duration-300 ease-in-out">
-          <li class="h-top-menu-item"><a href="index.html">Home</a></li>
-          <li class="h-top-menu-item"><a href="smartphone.html">SmartPhone</a></li>
-          <li class="h-top-menu-item"><a href="laptop.html">LapTop</a></li>
-          <li class="h-top-menu-item"><a href="tablet.html">Tablet</a></li>
-          <li class="h-top-menu-item"><a href="smarthome.html">SmartHome</a></li>
-          <li class="h-top-menu-item"><a href="xe.html">Xe</a></li>
-        </ul>
-
-        <ul class="absolute right-0 flex justify-end items-center cursor-pointer px-2 sm:px-4 uppercase text-sm text-gray-600 font-medium">
-          <li class="cursor-pointer py-1 hover:text-gray-800">
-            <a href="#" class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-              </svg>              
-              <span class="ml-2">Login</span>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 font-['Inter']">
+  <div class="content-wrapper max-w-screen-2xl text-base mx-auto">
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+              <img src="img/NEWS TECH.png" alt="TechNews Logo" class="w-12 h-12 object-contain rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300">
             </a>
-          </li>
-        </ul>
-        
-        <div class="absolute right-0 lg:hidden flex items-center justify-center cursor-pointer px-2 sm:px-8">
-          <svg id="h-toggle-top-menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden lg:flex items-center space-x-8">
+            <a href="index.html" class="nav-link group"><i class="fas fa-home mr-2"></i><span>Trang Chủ</span><div class="nav-underline"></div></a>
+            <a href="smartphone.html" class="nav-link group"><i class="fas fa-mobile-alt mr-2"></i><span>Điện Thoại</span><div class="nav-underline"></div></a>
+            <a href="laptop.html" class="nav-link group"><i class="fas fa-laptop mr-2"></i><span>Laptop</span><div class="nav-underline"></div></a>
+            <a href="tablet.html" class="nav-link group"><i class="fas fa-tablet-alt mr-2"></i><span>Máy Tính Bảng</span><div class="nav-underline"></div></a>
+            <a href="smarthome.html" class="nav-link group"><i class="fas fa-home mr-2"></i><span>Nhà Thông Minh</span><div class="nav-underline"></div></a>
+            <a href="xe.html" class="nav-link group"><i class="fas fa-car mr-2"></i><span>Xe Điện</span><div class="nav-underline"></div></a>
+          </div>
+
+          <!-- User Menu & Mobile Button -->
+          <div class="flex items-center space-x-3">
+            <div class="hidden md:flex items-center relative">
+              <input type="text" placeholder="Tìm kiếm sản phẩm..." class="w-64 px-4 py-2 pl-10 pr-4 text-sm bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+              <i class="fas fa-search absolute left-3 text-gray-400"></i>
+            </div>
+            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"><i class="fas fa-user text-sm"></i><span class="text-sm font-medium">Đăng Nhập</span></a>
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"><i class="fas fa-bars text-xl"></i></button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 py-4">
+          <div class="flex flex-col space-y-3">
+            <a href="index.html" class="mobile-nav-link"><i class="fas fa-home mr-3"></i><span>Trang Chủ</span></a>
+            <a href="smartphone.html" class="mobile-nav-link"><i class="fas fa-mobile-alt mr-3"></i><span>Điện Thoại</span></a>
+            <a href="laptop.html" class="mobile-nav-link"><i class="fas fa-laptop mr-3"></i><span>Laptop</span></a>
+            <a href="tablet.html" class="mobile-nav-link"><i class="fas fa-tablet-alt mr-3"></i><span>Máy Tính Bảng</span></a>
+            <a href="smarthome.html" class="mobile-nav-link"><i class="fas fa-home mr-3"></i><span>Nhà Thông Minh</span></a>
+            <a href="xe.html" class="mobile-nav-link"><i class="fas fa-car mr-3"></i><span>Xe Điện</span></a>
+          </div>
         </div>
       </nav>
     </header>
 
-    <main class="py-10">
-      <h1 class="text-3xl font-bold mb-6">SmartPhone</h1>
-      <p class="text-gray-600 mb-8">Tổng hợp tin tức, đánh giá và sản phẩm điện thoại.</p>
+    <main class="px-4 sm:px-6 lg:px-8 py-10">
+      <!-- Hero -->
+      <section class="relative h-[320px] bg-cover bg-center flex items-center justify-center text-white mt-6 rounded-3xl overflow-hidden shadow-2xl" style="background-image: url('./img/s24-ultra-den.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 z-0"></div>
+        <div class="relative z-10 text-center px-4">
+          <h1 class="text-4xl font-bold mb-3">SmartPhone</h1>
+          <p class="text-base max-w-2xl mx-auto">Tổng hợp tin tức, đánh giá và sản phẩm điện thoại.</p>
+        </div>
+      </section>
+
+      <div class="th-subheadline md:col-span-2 mt-10">
+        <div class="th-subheadline-deco-line"></div>
+        <div class="th-subheadline-label">Điện thoại nổi bật</div>
+        <div class="th-subheadline-deco-line"></div>
+      </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         <div class="bg-white rounded-md shadow-sm overflow-hidden">
@@ -73,7 +102,63 @@
       </div>
     </main>
 
-    <footer class="text-center py-6 mt-8 bg-gray-800 text-white">Footer</footer>
+    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <img src="img/NEWS TECH.png" alt="TechNews Logo" class="w-10 h-10 object-contain rounded-lg">
+              <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">TechNews</span>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">Nguồn tin tức công nghệ đáng tin cậy nhất Việt Nam. Cập nhật những xu hướng mới nhất và đánh giá sản phẩm khách quan.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300"><i class="fab fa-facebook text-xl"></i></a>
+              <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300"><i class="fab fa-twitter text-xl"></i></a>
+              <a href="#" class="text-gray-400 hover:text-red-400 transition-colors duration-300"><i class="fab fa-youtube text-xl"></i></a>
+              <a href="#" class="text-gray-400 hover:text-pink-400 transition-colors duration-300"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-white">Liên Kết Nhanh</h3>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Trang Chủ</a></li>
+              <li><a href="smartphone.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Điện Thoại</a></li>
+              <li><a href="laptop.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Laptop</a></li>
+              <li><a href="tablet.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Máy Tính Bảng</a></li>
+              <li><a href="smarthome.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Nhà Thông Minh</a></li>
+            </ul>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-white">Danh Mục</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Tin Tức Công Nghệ</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Đánh Giá Sản Phẩm</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">So Sánh Giá</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Hướng Dẫn Sử Dụng</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Thủ Thuật</a></li>
+            </ul>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-white">Liên Hệ</h3>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3"><i class="fas fa-map-marker-alt text-blue-400"></i><span class="text-gray-300 text-sm">Hà Nội, Việt Nam</span></div>
+              <div class="flex items-center space-x-3"><i class="fas fa-phone text-blue-400"></i><span class="text-gray-300 text-sm">+84 123 456 789</span></div>
+              <div class="flex items-center space-x-3"><i class="fas fa-envelope text-blue-400"></i><span class="text-gray-300 text-sm">info@technews.vn</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm">© 2024 TechNews. Tất cả quyền được bảo lưu.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+              <a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-300">Chính Sách Bảo Mật</a>
+              <a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-300">Điều Khoản Sử Dụng</a>
+              <a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-300">Sitemap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>

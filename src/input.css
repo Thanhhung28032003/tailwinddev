@@ -86,3 +86,9 @@
 .h-button{
     @apply absolute bg-white text-gray-900 w-11/12 bottom-4 left-1/2 -translate-x-1/2 hidden group-hover:block group-hover:animate-fadeIn text-center uppercase tracking-wider py-4 px-8 text-[13px] font-semibold cursor-pointer hover:bg-opacity-90 transition rounded z-20;
 }
+.product-card {
+  @apply bg-white h-[400px] w-[300px] flex flex-col items-center justify-center relative overflow-hidden rounded-md shadow-sm border-2 border-gray-200 p-4;
+}
+.more-product-card {
+  @apply bg-white rounded-md shadow-sm overflow-hidden flex flex-col md:flex-row mb-8;
+}
