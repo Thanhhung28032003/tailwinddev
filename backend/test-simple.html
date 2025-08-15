@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test API Đơn Giản</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .result { background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        button { padding: 10px 20px; margin: 5px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test API MySQL</h1>
+    
+    <button onclick="testHealth()">Kiểm tra kết nối</button>
+    <button onclick="testProducts()">Lấy sản phẩm</button>
+    
+    <div id="result" class="result"></div>
+
+    <script>
+        async function testHealth() {
+            try {
+                const response = await fetch('http://localhost:4000/api/health');
+                const data = await response.json();
+                document.getElementById('result').innerHTML = '<strong>✅ Health Check:</strong><br>' + JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('result').innerHTML = '<strong>❌ Lỗi:</strong><br>' + error.message;
+            }
+        }
+
+        async function testProducts() {
+            try {
+                const response = await fetch('http://localhost:4000/api/products');
+                const data = await response.json();
+                document.getElementById('result').innerHTML = '<strong>📦 Sản phẩm:</strong><br>' + JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('result').innerHTML = '<strong>❌ Lỗi:</strong><br>' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

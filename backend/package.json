@@ -5,6 +5,10 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js",
+    "init-db": "node scripts/init-db.js",
+    "add-product": "node scripts/add-product.js",
+    "update-product": "node scripts/update-product.js",
+    "test-api": "node scripts/test-api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,7 +17,9 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mysql2": "^3.14.3"
   }
 }

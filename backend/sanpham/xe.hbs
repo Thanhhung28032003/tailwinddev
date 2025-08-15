@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechNews - Xe Công Nghệ</title>
+  <link rel="icon" href="img/NEWS TECH.png" sizes="16x16">
+  <link href="output.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="main.js" defer></script>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 font-['Inter']">
+  
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-lg">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <img src="img/NEWS TECH.png" alt="TechNews Logo" class="w-10 h-10 object-contain rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+          <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechNews</span>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-home mr-2"></i>Trang chủ
+          </a>
+          <a href="smartphone.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-mobile-alt mr-2"></i>Smartphone
+          </a>
+          <a href="laptop.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-laptop mr-2"></i>Laptop
+          </a>
+          <a href="tablet.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-tablet-alt mr-2"></i>Tablet
+          </a>
+          <a href="smarthome.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-home mr-2"></i>Smart Home
+          </a>
+          <a href="xe.html" class="nav-link text-blue-600 font-semibold">
+            <i class="fas fa-car mr-2"></i>Xe Công Nghệ
+          </a>
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <a href="login.html" class="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            <i class="fas fa-user text-sm"></i>
+            <span class="text-sm font-medium">Đăng Nhập</span>
+          </a>
+          <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <nav class="flex flex-col space-y-4">
+          <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-home mr-2"></i>Trang chủ
+          </a>
+          <a href="smartphone.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-mobile-alt mr-2"></i>Smartphone
+          </a>
+          <a href="laptop.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-laptop mr-2"></i>Laptop
+          </a>
+          <a href="tablet.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-tablet-alt mr-2"></i>Tablet
+          </a>
+          <a href="smarthome.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+            <i class="fas fa-home mr-2"></i>Smart Home
+          </a>
+          <a href="xe.html" class="nav-link text-blue-600 font-semibold">
+            <i class="fas fa-car mr-2"></i>Xe Công Nghệ
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/80 z-10"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"></div>
+    
+    <div class="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6">
+        <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Xe Công Nghệ</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200">
+        Khám phá thế giới xe hơi thông minh, điện và tự động lái
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#featured-cars" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          <i class="fas fa-car mr-2"></i>Khám phá xe
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Cars Section -->
+  <section id="featured-cars" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Xe Nổi Bật</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Những mẫu xe công nghệ tiên tiến nhất, kết hợp giữa thiết kế hiện đại và công nghệ đột phá
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tesla Model S -->
+        <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                 alt="Tesla Model S" 
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-green-500 text-white text-sm font-semibold rounded-full">Điện</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Tesla Model S</h3>
+            <p class="text-gray-600 mb-4">Sedan điện cao cấp với khả năng tự động lái cấp độ 3</p>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-star text-yellow-400"></i>
+                <span class="text-gray-700 font-semibold">4.9</span>
+              </div>
+              <span class="text-2xl font-bold text-blue-600">$89,990</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              <i class="fas fa-info-circle mr-2"></i>Chi tiết
+            </button>
+          </div>
+        </div>
+
+        <!-- BMW iX -->
+        <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                 alt="BMW iX" 
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-green-500 text-white text-sm font-semibold rounded-full">Điện</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">BMW iX</h3>
+            <p class="text-gray-600 mb-4">SUV điện cao cấp với thiết kế tương lai và công nghệ tiên tiến</p>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-star text-yellow-400"></i>
+                <span class="text-gray-700 font-semibold">4.8</span>
+              </div>
+              <span class="text-2xl font-bold text-blue-600">$84,100</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              <i class="fas fa-info-circle mr-2"></i>Chi tiết
+            </button>
+          </div>
+        </div>
+
+        <!-- Mercedes EQS -->
+        <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                 alt="Mercedes EQS" 
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-green-500 text-white text-sm font-semibold rounded-full">Điện</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Mercedes EQS</h3>
+            <p class="text-gray-600 mb-4">Sedan điện sang trọng với cabin hyper-screen và công nghệ MBUX</p>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-star text-yellow-400"></i>
+                <span class="text-gray-700 font-semibold">4.9</span>
+              </div>
+              <span class="text-2xl font-bold text-blue-600">$102,310</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              <i class="fas fa-info-circle mr-2"></i>Chi tiết
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Features Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Công Nghệ Tiên Tiến</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Khám phá những công nghệ đột phá đang định hình tương lai của ngành xe hơi
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center group">
+          <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-robot text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Tự động lái</h3>
+          <p class="text-gray-600">Công nghệ AI tiên tiến cho phép xe tự động di chuyển an toàn</p>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-battery-full text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Pin tiên tiến</h3>
+          <p class="text-gray-600">Công nghệ pin lithium-ion thế hệ mới với tuổi thọ cao</p>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-wifi text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Kết nối 5G</h3>
+          <p class="text-gray-600">Kết nối internet tốc độ cao cho trải nghiệm số hóa hoàn hảo</p>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-shield-alt text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Bảo mật cao</h3>
+          <p class="text-gray-600">Hệ thống bảo mật đa lớp bảo vệ xe và dữ liệu người dùng</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <img src="img/NEWS TECH.png" alt="TechNews Logo" class="w-10 h-10 object-contain rounded-xl">
+            <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">TechNews</span>
+          </div>
+          <p class="text-gray-400 mb-4">
+            Nguồn tin tức công nghệ hàng đầu Việt Nam, cập nhật những xu hướng mới nhất trong lĩnh vực xe công nghệ.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Liên kết nhanh</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">Trang chủ</a></li>
+            <li><a href="smartphone.html" class="text-gray-400 hover:text-white transition-colors duration-300">Smartphone</a></li>
+            <li><a href="laptop.html" class="text-gray-400 hover:text-white transition-colors duration-300">Laptop</a></li>
+            <li><a href="tablet.html" class="text-gray-400 hover:text-white transition-colors duration-300">Tablet</a></li>
+            <li><a href="smarthome.html" class="text-gray-400 hover:text-white transition-colors duration-300">Smart Home</a></li>
+            <li><a href="xe.html" class="text-gray-400 hover:text-white transition-colors duration-300">Xe Công Nghệ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Danh mục xe</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Xe điện</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Xe tự động lái</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Xe hybrid</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Xe thể thao</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Liên hệ</h3>
+          <div class="space-y-3">
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-map-marker-alt text-blue-400"></i>
+              <span class="text-gray-400">Hà Nội, Việt Nam</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-phone text-blue-400"></i>
+              <span class="text-gray-400">+84 123 456 789</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-envelope text-blue-400"></i>
+              <span class="text-gray-400">info@technews.vn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">
+          © 2025 TechNews. Tất cả quyền được bảo lưu.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .nav-link {
+      position: relative;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      background-color: rgba(59, 130, 246, 0.1);
+    }
+  </style>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const icon = this.querySelector('i');
+      
+      mobileMenu.classList.toggle('hidden');
+      
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.className = 'fas fa-bars text-xl';
+      } else {
+        icon.className = 'fas fa-times text-xl';
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
