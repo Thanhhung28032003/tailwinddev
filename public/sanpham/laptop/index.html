@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TechNews - Laptop</title>
+    <meta name="description" content="Tin tức, đánh giá, sản phẩm nổi bật về laptop công nghệ mới nhất tại TechNews." />
   <!-- Styles -->
   <link href="../../output.css" rel="stylesheet" />
   <link href="../../styles.css" rel="stylesheet" />
@@ -11,7 +12,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Scripts -->
-  <script src="../../main.js" defer></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="bg-gradient-to-br from-slate-50 to-slate-100 font-['Inter']">
   <div class="content-wrapper max-w-screen-2xl text-base mx-auto">
@@ -24,42 +27,43 @@
             </a>
           </div>
           <nav class="hidden md:flex items-center space-x-8">
-            <a href="../../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
-            <i class="fas fa-home mr-2"></i>Trang chủ
-          </a>
-            <a href="../../smartphone/smartphone.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
-            <i class="fas fa-mobile-alt mr-2"></i>Smartphone
-          </a>
-            <a href="../../laptop/laptop.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
-            <i class="fas fa-laptop mr-2"></i>Laptop
-          </a>
-            <a href="../../tablet/tablet.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
-            <i class="fas fa-tablet-alt mr-2"></i>Tablet
-          </a>
-            <a href="../../smarthome/smarthome.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
-            <i class="fas fa-home mr-2"></i>Smart Home
-          </a>
-            <a href="xe.html" class="nav-link text-blue-600 font-semibold">
-            <i class="fas fa-car mr-2"></i>Xe Công Nghệ
-          </a>
+              <a href="../../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                <i class="fas fa-home mr-2"></i>Trang chủ
+              </a>
+              <a href="../smartphone/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                <i class="fas fa-mobile-alt mr-2"></i>Smartphone
+              </a>
+              <a href="index.html" class="nav-link text-blue-600 font-semibold">
+                <i class="fas fa-laptop mr-2"></i>Laptop
+              </a>
+              <a href="../tablet/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                <i class="fas fa-tablet-alt mr-2"></i>Tablet
+              </a>
+              <a href="../smarthome/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                <i class="fas fa-home mr-2"></i>Smart Home
+              </a>
+              <a href="../xe/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                <i class="fas fa-car mr-2"></i>Xe Công Nghệ
+              </a>
         </nav>
           <div class="flex items-center space-x-3">
             <div class="hidden md:flex items-center relative">
               <input type="text" placeholder="Tìm kiếm sản phẩm..." class="w-64 px-4 py-2 pl-10 pr-4 text-sm bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
               <i class="fas fa-search absolute left-3 text-gray-400"></i>
             </div>
-            <a href="../../khachhang/login.html" class="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"><i class="fas fa-user text-sm"></i><span class="text-sm font-medium">Đăng Nhập</span></a>
+            <!-- Sửa đường dẫn đăng nhập nếu có thư mục khachhang, nếu không thì để # hoặc cập nhật đúng -->
+            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"><i class="fas fa-user text-sm"></i><span class="text-sm font-medium">Đăng Nhập</span></a>
             <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"><i class="fas fa-bars text-xl"></i></button>
           </div>
         </div>
         <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 py-4">
           <div class="flex flex-col space-y-3">
-            <a href="../../index.html" class="mobile-nav-link"><i class="fas fa-home mr-3"></i><span>Trang Chủ</span></a>
-            <a href="../../smartphone/smartphone.html" class="mobile-nav-link"><i class="fas fa-mobile-alt mr-3"></i><span>Điện Thoại</span></a>
-            <a href="laptop.html" class="mobile-nav-link"><i class="fas fa-laptop mr-3"></i><span>Laptop</span></a>
-            <a href="../../tablet/tablet.html" class="mobile-nav-link"><i class="fas fa-tablet-alt mr-3"></i><span>Máy Tính Bảng</span></a>
-            <a href="../../smarthome/smarthome.html" class="mobile-nav-link"><i class="fas fa-home mr-3"></i><span>Nhà Thông Minh</span></a>
-            <a href="../xe/xe.html" class="mobile-nav-link"><i class="fas fa-car mr-3"></i><span>Xe Điện</span></a>
+            <a href="../../../index.html" class="mobile-nav-link"><i class="fas fa-home mr-3"></i><span>Trang Chủ</span></a>
+            <a href="../smartphone/index.html" class="mobile-nav-link"><i class="fas fa-mobile-alt mr-3"></i><span>Điện Thoại</span></a>
+            <a href="index.html" class="mobile-nav-link"><i class="fas fa-laptop mr-3"></i><span>Laptop</span></a>
+            <a href="../tablet/index.html" class="mobile-nav-link"><i class="fas fa-tablet-alt mr-3"></i><span>Máy Tính Bảng</span></a>
+            <a href="../smarthome/index.html" class="mobile-nav-link"><i class="fas fa-home mr-3"></i><span>Nhà Thông Minh</span></a>
+            <a href="../xe/index.html" class="mobile-nav-link"><i class="fas fa-car mr-3"></i><span>Xe Điện</span></a>
           </div>
         </div>
       </nav>
@@ -124,12 +128,19 @@
         </div>
       </div>
     </main>
+    <section class="py-20" id="news">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-700">Tin tức Laptop mới nhất</h2>
+      <p class="text-lg text-gray-600">Tổng hợp tin tức nổi bật về Laptop công nghệ, cập nhật liên tục</p>
+    </div>
+    <div id="car-news" class="max-w-3xl mx-auto"></div>
+  </section>
 
     <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white mt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="space-y-4">
-            <div class="flex items-center space-x-3"><img src="img/NEWS TECH.png" alt="TechNews Logo" class="w-10 h-10 object-contain rounded-lg"><span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">TechNews</span></div>
+            <div class="flex items-center space-x-3"><img src="../../img/NEWS TECH.png" alt="TechNews Logo" class="w-10 h-10 object-contain rounded-lg"><span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">TechNews</span></div>
             <p class="text-gray-300 text-sm leading-relaxed">Nguồn tin tức công nghệ đáng tin cậy nhất Việt Nam.</p>
             <div class="flex space-x-4">
               <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300"><i class="fab fa-facebook text-xl"></i></a>
@@ -139,6 +150,7 @@
             </div>
           </div>
           <div class="space-y-4"><h3 class="text-lg font-semibold text-white">Liên Kết Nhanh</h3><ul class="space-y-2"><li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Trang Chủ</a></li><li><a href="smartphone.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Điện Thoại</a></li><li><a href="laptop.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Laptop</a></li><li><a href="tablet.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Máy Tính Bảng</a></li><li><a href="smarthome.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Nhà Thông Minh</a></li></ul></div>
+            <div class="space-y-4"><h3 class="text-lg font-semibold text-white">Liên Kết Nhanh</h3><ul class="space-y-2"><li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Trang Chủ</a></li><li><a href="../smartphone/index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Điện Thoại</a></li><li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Laptop</a></li><li><a href="../tablet/index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Máy Tính Bảng</a></li><li><a href="../smarthome/index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Nhà Thông Minh</a></li></ul></div>
           <div class="space-y-4"><h3 class="text-lg font-semibold text-white">Danh Mục</h3><ul class="space-y-2"><li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Tin Tức Công Nghệ</a></li><li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Đánh Giá Sản Phẩm</a></li><li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">So Sánh Giá</a></li><li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Hướng Dẫn Sử Dụng</a></li><li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Thủ Thuật</a></li></ul></div>
           <div class="space-y-4"><h3 class="text-lg font-semibold text-white">Liên Hệ</h3><div class="space-y-3"><div class="flex items-center space-x-3"><i class="fas fa-map-marker-alt text-blue-400"></i><span class="text-gray-300 text-sm">Hà Nội, Việt Nam</span></div><div class="flex items-center space-x-3"><i class="fas fa-phone text-blue-400"></i><span class="text-gray-300 text-sm">+84 123 456 789</span></div><div class="flex items-center space-x-3"><i class="fas fa-envelope text-blue-400"></i><span class="text-gray-300 text-sm">info@technews.vn</span></div></div></div>
         </div>

@@ -207,5 +207,35 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
+    // Hiển thị tin tức xe nếu có vùng car-news
+        const CACHE_NAME = 'technews-cache-v1';
+        const urlsToCache = [
+          '/',
+          '/index.html',
+          '/main.js',
+          '/output.css',
+          // Thêm các file tĩnh khác cần cache
+        ];
+        
+        self.addEventListener('install', event => {
+          event.waitUntil(
+            caches.open(CACHE_NAME)
+              .then(cache => cache.addAll(urlsToCache))
+          );
+        });
+        
+        self.addEventListener('fetch', event => {
+          event.respondWith(
+            caches.match(event.request)
+              .then(response => response || fetch(event.request))
+          );
+        });
+        self.addEventListener('fetch', event => {
+          event.respondWith(
+            caches.match(event.request)
+              .then(response => response || fetch(event.request))
+          );
+        });
+
     console.log('TechNews website enhanced with interactive features!');
 });
